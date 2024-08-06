@@ -13,7 +13,7 @@ env_data = dict()
 
 def ParseEnv(data: dict):
     temp = "/"
-    with open(".env", "r", encoding="utf-8") as f:
+    with open(module_path + "/.env", "r", encoding="utf-8") as f:
         while temp != "":
             temp = f.readline()
             if temp == "":

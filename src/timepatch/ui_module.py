@@ -5,8 +5,13 @@ from PyQt6.QtCore import QRect, QSize
 import os as __os
 
 qtApp = QApplication([])
-logger_module = logging.getLevelName(__name__)
+logger_module = logging.getLogger(__name__)
 module_path = __os.path.dirname(__file__)
+
+
+def resetQtApplication(args: list[str]):
+    global qtApp
+    qtApp = QApplication(args)
 
 
 class WindowDivHeaderNav(QWidget):
